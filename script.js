@@ -59,7 +59,7 @@ window.addEventListener('load', function () {
 // ==================== THEME MANAGEMENT ====================
 class ThemeManager {
   constructor() {
-    this.currentTheme = this.getStoredTheme() || this.getPreferredTheme();
+    this.currentTheme = this.getStoredTheme() || 'dark';
     this.applyTheme(this.currentTheme);
     this.setupEventListeners();
   }
