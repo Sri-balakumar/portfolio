@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sri Balakumar | Junior Software Developer</title>
+  <meta name="description" content="Sri Balakumar - Junior Software Developer at Alphalize, working with Python, Odoo, and modern web technologies." />
+  <meta name="keywords" content="Sri Balakumar, Junior Software Developer, Python, Odoo, JavaScript, React, Web Developer, Portfolio" />
+  <meta name="author" content="Sri Balakumar R" />
+  <meta property="og:title" content="Sri Balakumar | Junior Software Developer" />
+  <meta property="og:description" content="Junior Software Developer at Alphalize, building solutions with Python, Odoo, and web technologies." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2563eb" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%232563eb'/><text x='50' y='55' font-size='40' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'>SB</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Page Loader -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-logo">SB</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+      <p class="loader-text">Loading Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Particle Network Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress">
+    <div class="reading-progress-bar"></div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <span>SB</span>
+        </div>
+        <span class="logo-text">Sri Balakumar</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-status">
+            <span class="status-dot"></span> Working at Alphalize
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="highlight">Sri Balakumar</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span class="typing-text"></span>
+          </h2>
+          <p class="hero-description">
+            Junior Software Developer at Alphalize, building efficient business solutions with Python and Odoo.
+            Passionate about clean code, modern web technologies, and turning ideas into impactful software.
+          </p>
+          <div class="hero-buttons">
+            <a href="https://drive.google.com/drive/folders/1L5i05Du0rhwjhT9D40ISgX-YO_NJ9ww2?usp=sharing"
+               class="btn btn-primary magnetic" target="_blank">
+              <i class="fas fa-download"></i>
+              Download Resume
+            </a>
+            <a href="#contact" class="btn btn-outline magnetic">
+              <i class="fas fa-envelope"></i>
+              Get in Touch
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/sri-balakumar-r-04b0a5281/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Sri-balakumar" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:sribalakumar04@gmail.com" class="social-link">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/7092090133" target="_blank" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="image-container">
+            <img src="images/profile.jpg?v=2" alt="Sri Balakumar - Developer" />
+            <div class="image-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg-elements">
+      <div class="bg-element bg-element-1"></div>
+      <div class="bg-element bg-element-2"></div>
+      <div class="bg-element bg-element-3"></div>
+    </div>
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </a>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">About Me</h2>
+        <p class="section-subtitle">A snapshot of who I am and what drives me</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am Sri Balakumar, a B.Sc Computer Technology graduate from Kongunadu Arts and Science College (KASC), currently working as a Junior Software Developer at Alphalize.
+            I work with Python, Odoo, and XML to build and customize ERP solutions, alongside my skills in HTML, CSS, JavaScript, ReactJS, PHP, MySQL, and REST APIs.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-target="6">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-target="10">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-card glass-card">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">Certificates</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-flip">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Education</h2>
+        <p class="section-subtitle">My academic journey and qualifications</p>
+      </div>
+      <div class="education-timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>B.Sc Computer Technology</h3>
+              <span class="timeline-period">2022 - 2025</span>
+            </div>
+            <h4>Kongunadu Arts and Science College, Coimbatore</h4>
+            <div class="grade">CGPA: 7.9/10</div>
+            <p>Comprehensive study of computer systems, programming languages, database management, and software development methodologies.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Higher Secondary Certificate (HSC)</h3>
+              <span class="timeline-period">2021 - 2022</span>
+            </div>
+            <h4>SMBM Matriculation Hr. Sec School, Dindigul</h4>
+            <div class="grade">Percentage: 81%</div>
+            <p>Specialized in Computer Science with focus on programming fundamentals and mathematical concepts.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Secondary School Certificate (SSC)</h3>
+              <span class="timeline-period">2019 - 2020</span>
+            </div>
+            <h4>SMBM Matriculation Hr. Sec School, Dindigul</h4>
+            <div class="grade">Percentage: 90.2%</div>
+            <p>Strong foundation in science and mathematics, laying the groundwork for future technical studies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Featured Projects</h2>
+        <p class="section-subtitle">Things I've built and shipped</p>
+      </div>
+      <!-- Filter Tabs -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="react">React</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card glass-card tilt-card" data-category="python">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="project-content">
+            <h3>Automative CGPA Calculator</h3>
+            <p>Advanced marksheet processing system using OCR technology to extract student marks automatically. Calculates CGPA with high accuracy and generates comprehensive analytical reports.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Tesseract</span>
+              <span class="tech-tag">Pandas</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links"></div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-category="python">
+          <div class="project-icon">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <div class="project-content">
+            <h3>Quiz Cracker Application</h3>
+            <p>An interactive desktop quiz application built with Python Tkinter. Features secure authentication, dynamic timers, randomized questions, and automated scoreboard.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Tkinter</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">JSON</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/Sri-balakumar/quiz_app" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-category="web">
+          <div class="project-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="project-content">
+            <h3>SRI Academy - School Management</h3>
+            <p>A modern, responsive school website for students, parents, and educators. Features interactive forms, dynamic calendar functionality, and gallery pages.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Responsive</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://sri-balakumar.github.io/school_management_system/" target="_blank" class="project-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/Sri-balakumar/school-management-system" target="_blank" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-category="web">
+          <div class="project-icon">
+            <i class="fas fa-vote-yea"></i>
+          </div>
+          <div class="project-content">
+            <h3>Voting System</h3>
+            <p>A web-based online voting system for colleges and small organizations, featuring secure user voting, admin management, and real-time results display.</p>
+            <div class="project-tech">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/Sri-balakumar/voting_system" target="_blank" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-category="web">
+          <div class="project-icon">
+            <i class="fas fa-qrcode"></i>
+          </div>
+          <div class="project-content">
+            <h3>QR Code Generator</h3>
+            <p>A modern QR Code Generator web app. Generate QR codes instantly, customize size and color, toggle dark/light mode, and download or share easily.</p>
+            <div class="project-tech">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://qr-generator-quick-response.netlify.app/" target="_blank" class="project-link" title="Live Demo">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/Sri-balakumar/qr_code_generator" target="_blank" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass-card tilt-card" data-category="react">
+          <div class="project-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div class="project-content">
+            <h3>Calculator App</h3>
+            <p>A modern, responsive calculator built with React and Vite. Features a clean interface with gradient backgrounds, smooth animations, and error handling.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Vite</span>
+              <span class="tech-tag">CSS3</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <div class="project-links">
+              <a href="https://github.com/Sri-balakumar/calculator_app" target="_blank" class="project-link" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-flip">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Technical Skills</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
+      </div>
+      <div class="skills-content">
+        <div class="skills-category">
+          <h3>Frontend Development</h3>
+          <div class="skills-grid">
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-html5"></i>
+              </div>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-css3-alt"></i>
+              </div>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-js-square"></i>
+              </div>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-react"></i>
+              </div>
+              <span>ReactJS</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3>Backend & Database</h3>
+          <div class="skills-grid">
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-python"></i>
+              </div>
+              <span>Python</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-php"></i>
+              </div>
+              <span>PHP</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fas fa-database"></i>
+              </div>
+              <span>MySQL</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fas fa-server"></i>
+              </div>
+              <span>REST API</span>
+            </div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3>Tools & Others</h3>
+          <div class="skills-grid">
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-github"></i>
+              </div>
+              <span>GitHub</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fas fa-code"></i>
+              </div>
+              <span>VS Code</span>
+            </div>
+            <div class="skill-item glass-card">
+              <div class="skill-icon-wrap">
+                <i class="fab fa-windows"></i>
+              </div>
+              <span>Windows</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Work Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Work Experience</h2>
+        <p class="section-subtitle">Where I've been putting my skills to work</p>
+      </div>
+      <div class="experience-content">
+        <div class="experience-card glass-card">
+          <div class="experience-header">
+            <div class="experience-company">
+              <div class="company-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <div>
+                <h3>Alphalize</h3>
+                <span class="experience-role">Junior Software Developer</span>
+              </div>
+            </div>
+            <span class="experience-period">2025 - Present</span>
+          </div>
+          <p class="experience-desc">
+            Working with Python, Odoo, XML, and PostgreSQL to build and customize ERP solutions for business process automation.
+          </p>
+          <ul class="experience-highlights">
+            <li>Building and customizing Odoo modules for client business workflows</li>
+            <li>Developing XML views, reports, and server actions</li>
+            <li>Integrating third-party APIs and automating data pipelines</li>
+          </ul>
+          <div class="experience-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Odoo</span>
+            <span class="tech-tag">XML</span>
+            <span class="tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-flip">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="certificates">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Certificates</h2>
+        <p class="section-subtitle">Credentials that back up my expertise</p>
+      </div>
+      <div class="certificates-grid">
+        <div class="certificate-card glass-card">
+          <div class="certificate-image">
+            <img src="images/pythonudemy.jpg" alt="Python Certificate" />
+            <div class="certificate-overlay">
+              <button class="view-btn" onclick="openCertificate('images/pythonudemy.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <h3>Python for Complete Beginners</h3>
+            <p class="certificate-provider">Udemy</p>
+            <p class="certificate-desc">Comprehensive Python programming fundamentals</p>
+          </div>
+        </div>
+
+        <div class="certificate-card glass-card">
+          <div class="certificate-image">
+            <img src="images/html.jpg" alt="HTML Certificate" />
+            <div class="certificate-overlay">
+              <button class="view-btn" onclick="openCertificate('images/html.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <h3>Frontend Development - HTML</h3>
+            <p class="certificate-provider">Great Learning</p>
+            <p class="certificate-desc">Advanced HTML and web semantics</p>
+          </div>
+        </div>
+
+        <div class="certificate-card glass-card">
+          <div class="certificate-image">
+            <img src="images/css.jpg" alt="CSS Certificate" />
+            <div class="certificate-overlay">
+              <button class="view-btn" onclick="openCertificate('images/css.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <h3>Frontend Development - CSS</h3>
+            <p class="certificate-provider">Great Learning</p>
+            <p class="certificate-desc">Modern CSS and responsive design</p>
+          </div>
+        </div>
+
+        <div class="certificate-card glass-card">
+          <div class="certificate-image">
+            <img src="images/Aspire.jpg" alt="Python Web Developer Certificate" />
+            <div class="certificate-overlay">
+              <button class="view-btn" onclick="openCertificate('images/Aspire.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <h3>Python Web Developer</h3>
+            <p class="certificate-provider">ITC Infotech</p>
+            <p class="certificate-desc">Full-stack web development with Python</p>
+          </div>
+        </div>
+
+        <div class="certificate-card glass-card">
+          <div class="certificate-image">
+            <img src="images/IBMFrontend.jpg" alt="Web Development Fundamentals" />
+            <div class="certificate-overlay">
+              <button class="view-btn" onclick="openCertificate('images/IBMFrontend.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </button>
+            </div>
+          </div>
+          <div class="certificate-info">
+            <h3>Web Development Fundamentals</h3>
+            <p class="certificate-provider">IBM SkillsBuild</p>
+            <p class="certificate-desc">Web Development Fundamentals</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider wave-flip">
+    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M0,40 C300,100 900,0 1200,60 L1200,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal-text">Get In Touch</h2>
+        <p class="section-subtitle">Have a project in mind? Let's talk</p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:sribalakumar04@gmail.com" class="contact-card glass-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3>Email</h3>
+          <p>sribalakumar04@gmail.com</p>
+          <span class="contact-cta">Send a mail <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tel:+917092090133" class="contact-card glass-card">
+          <div class="contact-card-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Phone</h3>
+          <p>+91 7092090133</p>
+          <span class="contact-cta">Call me <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/sri-balakumar-r-04b0a5281/" target="_blank" class="contact-card glass-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>Sri Balakumar R</p>
+          <span class="contact-cta">Connect <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="https://wa.me/7092090133" target="_blank" class="contact-card glass-card">
+          <div class="contact-card-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p>+91 7092090133</p>
+          <span class="contact-cta">Message me <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+      <div class="contact-location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Dindigul, Tamil Nadu, India</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo-icon"><span>SB</span></div>
+          <div>
+            <span class="footer-name">Sri Balakumar</span>
+            <p class="footer-tagline">Building software that matters.</p>
+          </div>
+        </div>
+        <nav class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/sri-balakumar-r-04b0a5281/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Sri-balakumar" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:sribalakumar04@gmail.com" class="social-link">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/7092090133" target="_blank" class="social-link">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Sri Balakumar R. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Certificate Modal -->
+  <div id="certificateModal" class="modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modalImage" alt="Certificate">
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  <script src="particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
