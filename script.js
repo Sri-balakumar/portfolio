@@ -59,7 +59,7 @@ window.addEventListener('load', function () {
 // ==================== THEME MANAGEMENT ====================
 class ThemeManager {
   constructor() {
-    this.currentTheme = this.getStoredTheme() || 'dark';
+    this.currentTheme = 'dark';
     this.applyTheme(this.currentTheme);
     this.setupEventListeners();
   }
@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var typingEl = document.querySelector('.typing-text');
   if (typingEl && typeof Typed !== 'undefined') {
     new Typed('.typing-text', {
-      strings: ['Junior Software Developer'],
+      strings: ['Software Engineer'],
       typeSpeed: 80,
       backSpeed: 50,
       backDelay: 1500,

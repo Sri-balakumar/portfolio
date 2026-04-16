@@ -1185,6 +1185,67 @@ section {
   gap: 0.5rem;
   margin-top: 0.5rem;
 }
+.experience-company-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.experience-company-header h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+.experience-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: var(--font-mono);
+}
+.experience-roles {
+  position: relative;
+  padding-left: 1.75rem;
+  margin: 0 0 1.5rem 0.75rem;
+}
+.experience-roles::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: var(--gradient-primary);
+  opacity: 0.5;
+}
+.role-item {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.role-item:last-child {
+  margin-bottom: 0;
+}
+.role-marker {
+  position: absolute;
+  left: -1.75rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 0 3px var(--bg-primary);
+}
+.role-title {
+  font-size: 1.05rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  margin-bottom: 0.2rem;
+}
+.role-period {
+  display: inline-block;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
 
 /* ==================== CERTIFICATES ==================== */
 .certificates {
