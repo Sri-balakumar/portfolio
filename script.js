@@ -130,8 +130,10 @@ function updateReadingProgress() {
 // ==================== SMOOTH SCROLL ====================
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
   link.addEventListener('click', function (e) {
+    var href = link.getAttribute('href');
+    if (!href || href.charAt(0) !== '#' || href === '#') return;
     e.preventDefault();
-    var target = document.querySelector(link.getAttribute('href'));
+    var target = document.querySelector(href);
     if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
@@ -275,14 +277,15 @@ function initCounters() {
 // ==================== SCROLL ANIMATIONS ====================
 function initScrollAnimations() {
   var elements = document.querySelectorAll(
-    '.project-card, .skill-item, .certificate-card, .timeline-item, .contact-card, .stat-card'
+    '.project-card, .skill-item, .certificate-card, .timeline-item, ' +
+    '.contact-card, .stat-card, .experience-card, .contact-form-wrapper, ' +
+    '.about-text p, .section-subtitle'
   );
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry, idx) {
       if (entry.isIntersecting) {
         setTimeout(function () {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('revealed');
         }, idx * 80);
         observer.unobserve(entry.target);
       }
@@ -290,9 +293,7 @@ function initScrollAnimations() {
   }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
   elements.forEach(function (el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(40px)';
-    el.style.transition = 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+    el.classList.add('scroll-fade');
     observer.observe(el);
   });
 }
@@ -422,6 +423,40 @@ document.addEventListener('visibilitychange', function () {
   document.body.style.animationPlayState = document.hidden ? 'paused' : 'running';
 });
 
+// ==================== EMAIL OBFUSCATION ====================
+(function () {
+  var els = document.querySelectorAll('[data-email]');
+  els.forEach(function (el) {
+    var parts = el.getAttribute('data-email').split('|');
+    if (parts.length !== 2) return;
+    var addr = parts[0] + '@' + parts[1];
+    el.setAttribute('href', 'mailto:' + addr);
+    var display = el.querySelector('.email-display');
+    if (display) display.textContent = addr;
+  });
+})();
+
+// ==================== HERO CURSOR-FOLLOW GRADIENT ====================
+(function () {
+  var hero = document.querySelector('.hero');
+  if (!hero) return;
+  if (window.matchMedia('(hover: none)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var rafId = null;
+  var lastX = 0, lastY = 0;
+  hero.addEventListener('mousemove', function (e) {
+    var rect = hero.getBoundingClientRect();
+    lastX = ((e.clientX - rect.left) / rect.width) * 100;
+    lastY = ((e.clientY - rect.top) / rect.height) * 100;
+    if (rafId) return;
+    rafId = requestAnimationFrame(function () {
+      hero.style.setProperty('--mouse-x', lastX + '%');
+      hero.style.setProperty('--mouse-y', lastY + '%');
+      rafId = null;
+    });
+  });
+})();
+
 // ==================== RESUME MODAL ====================
 (function () {
   var btn = document.getElementById('viewResumeBtn');
@@ -429,7 +464,7 @@ document.addEventListener('visibilitychange', function () {
   var closeBtn = document.getElementById('resumeModalClose');
   var iframe = document.getElementById('resumeIframe');
   if (!btn || !modal || !iframe) return;
-  var src = 'assets/Sri_Balakumar_Resume.pdf';
+  var src = 'https://drive.google.com/file/d/1BJPp7NuITMN-NpsN6vhbcpNpuIw2bouN/preview';
   function open() {
     iframe.src = src;
     modal.classList.add('show');
