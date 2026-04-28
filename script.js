@@ -422,6 +422,34 @@ document.addEventListener('visibilitychange', function () {
   document.body.style.animationPlayState = document.hidden ? 'paused' : 'running';
 });
 
+// ==================== RESUME MODAL ====================
+(function () {
+  var btn = document.getElementById('viewResumeBtn');
+  var modal = document.getElementById('resumeModal');
+  var closeBtn = document.getElementById('resumeModalClose');
+  var iframe = document.getElementById('resumeIframe');
+  if (!btn || !modal || !iframe) return;
+  var src = 'assets/Sri_Balakumar_Resume.pdf';
+  function open() {
+    iframe.src = src;
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    modal.classList.remove('show');
+    iframe.src = '';
+    document.body.style.overflow = '';
+  }
+  btn.addEventListener('click', open);
+  if (closeBtn) closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('show')) close();
+  });
+})();
+
 // Export
 window.portfolioTheme = themeManager;
 window.openCertificate = openCertificate;

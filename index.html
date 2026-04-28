@@ -11,6 +11,14 @@
   <meta property="og:title" content="Sri Balakumar | Software Engineer" />
   <meta property="og:description" content="Software Engineer at Alphalize, building solutions with Python, Odoo, and web technologies." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sri-balakumar.github.io/portfolio/" />
+  <meta property="og:image" content="https://sri-balakumar.github.io/portfolio/images/profile.jpg" />
+  <meta property="og:image:alt" content="Sri Balakumar - Software Engineer" />
+  <meta property="og:site_name" content="Sri Balakumar Portfolio" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Sri Balakumar | Software Engineer" />
+  <meta name="twitter:description" content="Software Engineer at Alphalize, building solutions with Python, Odoo, and web technologies." />
+  <meta name="twitter:image" content="https://sri-balakumar.github.io/portfolio/images/profile.jpg" />
   <meta name="theme-color" content="#2563eb" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%232563eb'/><text x='50' y='55' font-size='40' font-family='Arial,sans-serif' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'>SB</text></svg>" />
   <link rel="stylesheet" href="style.css" />
@@ -95,11 +103,10 @@
             Passionate about clean code, modern web technologies, and turning ideas into impactful software.
           </p>
           <div class="hero-buttons">
-            <a href="https://drive.google.com/drive/folders/1L5i05Du0rhwjhT9D40ISgX-YO_NJ9ww2?usp=sharing"
-               class="btn btn-primary magnetic" target="_blank">
-              <i class="fas fa-download"></i>
-              Download Resume
-            </a>
+            <button type="button" class="btn btn-primary magnetic" id="viewResumeBtn">
+              <i class="fas fa-file-alt"></i>
+              View Resume
+            </button>
             <a href="#contact" class="btn btn-outline magnetic">
               <i class="fas fa-envelope"></i>
               Get in Touch
@@ -122,7 +129,7 @@
         </div>
         <div class="hero-image">
           <div class="image-container">
-            <img src="images/profile.jpg?v=2" alt="Sri Balakumar - Developer" />
+            <img src="images/profile.jpg?v=3" alt="Sri Balakumar - Developer" />
             <div class="image-overlay"></div>
           </div>
         </div>
@@ -549,7 +556,7 @@
             <div class="role-item">
               <div class="role-marker"></div>
               <div class="role-content">
-                <h4 class="role-title">Junior Software Engineer — Odoo Developer</h4>
+                <h4 class="role-title">Junior Software Engineer</h4>
                 <span class="role-period">Jan 2026 - Apr 2026</span>
               </div>
             </div>
@@ -767,6 +774,20 @@
   <div id="certificateModal" class="modal">
     <span class="modal-close">&times;</span>
     <img class="modal-content" id="modalImage" alt="Certificate">
+  </div>
+
+  <!-- Resume Modal -->
+  <div id="resumeModal" class="modal resume-modal">
+    <div class="resume-modal-header">
+      <span class="resume-modal-title">Sri Balakumar — Resume</span>
+      <div class="resume-modal-actions">
+        <a href="assets/Sri_Balakumar_Resume.pdf" download class="resume-modal-btn">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <button type="button" class="resume-modal-close" id="resumeModalClose" aria-label="Close">&times;</button>
+      </div>
+    </div>
+    <iframe id="resumeIframe" class="resume-modal-iframe" title="Resume Preview" src=""></iframe>
   </div>
 
   <!-- Back to Top Button -->
